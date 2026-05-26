@@ -6,6 +6,7 @@ __pycache__/
 # Local outputs
 output/
 logs/
+proof_screenshots/
 *.log
 
 # OS/editor
