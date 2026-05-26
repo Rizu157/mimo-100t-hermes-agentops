@@ -1,0 +1,25 @@
+# Example Hermes config fragment for Xiaomi MiMo as custom OpenAI-compatible provider.
+# Copy relevant keys into ~/.hermes/config.yaml.
+# Put the actual API key in ~/.hermes/.env or your shell env, not here.
+
+model:
+  provider: custom
+  default: ${XIAOMI_MODEL}
+  base_url: ${XIAOMI_BASE_URL}
+  api_key: ${XIAOMI_API_KEY}
+  context_length: 128000
+
+agent:
+  max_turns: 90
+  tool_use_enforcement: true
+
+# Optional: use MiMo only for a specific Telegram topic/thread if your Hermes install supports routing.
+# model_routing:
+#   routes:
+#     - platform: telegram
+#       chat_id: -1000000000000
+#       thread_id: 123
+#       provider: custom
+#       model: ${XIAOMI_MODEL}
+#       base_url: ${XIAOMI_BASE_URL}
+#       api_key: ${XIAOMI_API_KEY}
